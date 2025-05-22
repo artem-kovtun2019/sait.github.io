@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Письменники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("background_golovna2.jpg"); /*no repeat center center fixed;*/
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 10px 10px;
+            width: calc(100% - 40px); /* Учитываем отступы */
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3); /* Напівпрозорий фон */
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease-in-out, transform 0.5s ease;
+        }
+
+        .search-icon {
+            margin-right: 10px;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .search-input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 18px;
+            color: #000;
+            flex: 1;
+
+        }
+
+        .search-input::placeholder {
+            color: wheat;
+            opacity: 0.7;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px;
+        }
+
+        .menu-button {
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            color: bisque;
+            font-size: 18px;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px; /* Отступ между кнопками */
+            background-color: rgba(0, 0, 0, 0.315); /* Напівпрозорий фон */
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease-in-out, transform 0.5s ease;
+        }
+
+        .menu-button:hover {
+            background: rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .menu-button:first-child {
+            margin-left: 0;
+        }
+
+        .menu-button:last-child {
+            margin-right: 0;
+        }
+
+        .header{
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            margin-bottom: 10px;
+        }
+        /* Стилі карток творів та письменників*/
+        .work-card { /* загальне створення картки */
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 10px;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        /*.work-card:hover {
+            transform: scale(1.01);
+        }*/
+
+        .work-image { /* фото твору в картках */
+            width: 120px;
+            height: 160px;
+            object-fit: cover; /* Зберігає пропорції зображення */
+            border-radius: 10px;
+            flex-shrink: 0; /* Не дозволяє зображенню зменшуватися */
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .work-content { /* штука для створення тексту в картках із творами */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            color: bisque;
+        }
+
+        .work-title { /* назва твору */
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+
+        .work-text { /* штука для створення карток */
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #ddd;
+        }
+
+        .tvori-button {
+            border: 2px dashed wheat;
+        }
+
+    </style>
+</head>
+<body>
+    `<header class = "header">
+        <h1> Письменники </h1>
+    </header>`
+    <div>
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Пошук...">
+        </div>
+        <div class="menu">
+            <a href="tvori.html" class="menu-button" style="text-align:center; text-decoration:none;">Твори</a>
+            <a href="pismenniki.html" class="menu-button  tvori-button" style="text-align:center; text-decoration:none;">Письменники</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="work-card">
+            <img src="pissmenniki/shevchenko.jpg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Тарас Григорович Шевченко</h2>
+                <p class="work-text">1814-1861</p>
+                <p class="work-text">с. Моринці</p>
+                <button class="menu-button">Дивитися</button>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="pissmenniki/lesya_ukrainka.jpg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Леся Українка(Лариса Петрівна Косач)</h2>
+                <p class="work-text">1871-1913</p>
+                <p class="work-text">м. Новоград-Волинський</p>
+                <button class="menu-button">Дивитися</button>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="pissmenniki/franko.jpg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Іван Якович Франко</h2>
+                <p class="work-text">1856-1916</p>
+                <p class="work-text">с. Нагуєвичі</p>
+                <button class="menu-button">Дивитися</button>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="pissmenniki/marko-vovchok.jpeg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Марко Вовчок(Марія Олександрівна Вілінська)</h2>
+                <p class="work-text">1833-1907</p>
+                <p class="work-text">маєток Єкатеринське</p>
+                <button class="menu-button">Дивитися</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('searchInput').oninput = function () { /* Шукає елемент із id="searchInput" */
+            let value = this.value.toLowerCase() /* перетворює його на маленькі літери */
+            let cards = document.querySelectorAll('.work-card') /* Знаходить усі картки творів/письменників (всі елементи з класом work-card) і зберігає їх у змінну cards */
+        
+            for (let card of cards) { /* цикл який вже шукає та виводить лише потрібне */
+                if (card.textContent.toLowerCase().includes(value)) {
+                    card.style.display = 'flex'
+                } else {
+                    card.style.display = 'none'
+                }
+            }
+        }
+    </script>
+        
+</body>
+</html>
