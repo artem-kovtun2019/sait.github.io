@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лісова пісня</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("1background_golovna2.jpg"); /*no repeat center center fixed;*/
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px;
+        }
+
+        .menu-button {
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            color: bisque;
+            font-size: 18px;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px; /* Отступ между кнопками */
+            background-color: rgba(0, 0, 0, 0.30); /* Напівпрозорий фон */
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease-in-out, transform 0.5s ease;
+        }
+
+        .menu-button:hover {
+            background: rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .menu-button:first-child {
+            margin-left: 0;
+        }
+
+        .menu-button:last-child {
+            margin-right: 0;
+        }
+
+        .header{
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            margin-bottom: 10px;
+        }
+        /* Стилі карток творів та письменників*/
+        .work-card { /* загальне створення картки */
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 10px;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        /*.work-card:hover {
+            transform: scale(1.01);
+        }*/
+
+        .work-image { /* фото твору в картках */
+            width: 120px;
+            height: 160px;
+            object-fit: cover; /* Зберігає пропорції зображення */
+            border-radius: 10px;
+            flex-shrink: 0; /* Не дозволяє зображенню зменшуватися */
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .work-content { /* штука для створення тексту в картках із творами */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            color: bisque;
+        }
+
+        .work-content h2 { /* заголовок картки */
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .work-title { /* назва твору */
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+
+        .work-text { /* штука для створення карток */
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #ddd;
+        }
+
+        .button-container { /*для кнопок внизу картки */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .tvori-button {
+            border: 2px dashed wheat;
+        }
+
+    </style>
+</head>
+<body>
+    `<header class = "header">
+        <h1> Читати "Лісова пісня" </h1>
+    </header>`
+    <div>
+        <div class="menu">
+            <a href="../tvori.html" class="menu-button tvori-button" style="text-align:center; text-decoration:none;">Твори</a>
+            <a href="../pismenniki.html" class="menu-button" style="text-align:center; text-decoration:none;">Письменники</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="work-card">
+            <img src="/photo_tvoriv/lisova_pisnya.jpeg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Короткий паспорт твору</h2>
+                <p class="work-text"><span style = "color: white;">Автор:</span> Лариса Петрівна Косач (Леся Українка)</p>
+                <p class="work-text"><span style = "color: white;">Жанр:</span> Драматична поема (драма-феєрія)</p>
+                <p class="work-text"><span style = "color: white;">Рік написання:</span> 1911</p>
+                <div class = "button-container">
+                    <a href="analiz_l_pisnya.html" class="menu-button" style="text-align:center; text-decoration:none;">Повний аналіз</a>
+                    <a href="../pissmenniki/l_ukrainka.html" class="menu-button" style="text-align:center; text-decoration:none;">Автор</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <div class="work-content">
+                <h2 class="work-title">Текст твору</h2>
+                <p class="work-text" style = "text-align: center;"> </p>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>
