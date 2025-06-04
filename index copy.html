@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html lang="uk">
+<div class="button-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Book</title>
-    <link rel="icon" href="book.png" type="image/png">
+    <title>Главная страница</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Для розміщення заголовка над кнопкою */
             justify-content: center;
             align-items: center;
-            background: url('background.jpg') no-repeat center;
+            background: url('background.jpg') no-repeat center center/cover;
             overflow: hidden;
-            color: white; /* Білий колір тексту за замовчуванням */
-            text-align: center; /* Вирівнювання тексту по центру для всього body */
         }
-    
+
         .background {
             position: absolute;
             top: 0;
@@ -28,37 +24,35 @@
             height: 100%;
             z-index: -1;
         }
-    
+
         .background div {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             animation: float 6s ease-in-out infinite;
-            backdrop-filter: blur(2px);
-
         }
-    
+
         .background div:nth-child(1) {
             width: 150px;
             height: 150px;
             top: 10%;
             left: 20%;
         }
-    
+
         .background div:nth-child(2) {
             width: 200px;
             height: 200px;
             top: 50%;
             left: 70%;
         }
-    
+
         .background div:nth-child(3) {
             width: 100px;
             height: 100px;
             top: 80%;
             left: 30%;
         }
-    
+
         @keyframes float {
             0%, 100% {
                 transform: translateY(0);
@@ -67,19 +61,11 @@
                 transform: translateY(-20px);
             }
         }
-    
-        h1 {
-            color: white; /* Білий колір тексту для заголовка */
-            margin-bottom: 20px; /* Додано відступ знизу від заголовка */
-            background-color: rgba(0, 0, 0, 0.5); /* Чорний прозорий фон */
-            padding: 10px; /* Додано внутрішні відступи для кращого вигляду */
-            border-radius: 5px; /* Заокруглення кутів фону */
-        }
-    
+
         .button-container {
             text-align: center;
         }
-    
+
         .button-container button {
             padding: 15px 30px;
             font-size: 18px;
@@ -88,18 +74,14 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 5px;
             cursor: pointer;
-            backdrop-filter: blur(10px); /* Ефект блюра */
+            backdrop-filter: blur(10px); /* Эффект блюра */
             transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
         }
-    
+
         .button-container button:hover {
-            opacity: 0.9; /* Зміна сили прозорості */
+            opacity: 0.9; /* Изменение силы прозрачности */
             background: rgba(255, 255, 255, 0.3);
             color: rgba(255, 255, 255, 1);
-        }
-
-        .button-link { /* Стилі для посилання, щоб воно виглядало як кнопка */
-            text-decoration: none; /* Прибираємо підкреслення */
         }
     </style>
 </head>
@@ -109,11 +91,9 @@
         <div></div>
         <div></div>
     </div>
-    <h1>Цей ресурс має в собі безліч творів, аналізів та біографій українських письменників. Почнімо! Муза вже чекає натхнення!</h1>
+    <h1>Цей ресурс має в собі безліч творіі, аналізів та біографій українськиї письменників. Почнімо! Муза вже чекає натхнення!</h1>
     <div class="button-container">
-        <a href="tvori.html" class="button-link">
-            <button>Почнімо!</button>
-        </a>
+        <button>Почнімо!</button>
     </div>
 </body>
 </html>

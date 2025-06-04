@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Думи мої, думи мої...</title>
+    <link rel="icon" href="../book.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("1background_golovna2.jpg"); /*no repeat center center fixed;*/
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px;
+        }
+
+        .menu-button {
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            color: bisque;
+            font-size: 18px;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px; /* Отступ между кнопками */
+            background-color: rgba(0, 0, 0, 0.30); /* Напівпрозорий фон */
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease-in-out, transform 0.5s ease;
+        }
+
+        .menu-button:hover {
+            background: rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .menu-button:first-child {
+            margin-left: 0;
+        }
+
+        .menu-button:last-child {
+            margin-right: 0;
+        }
+
+        .header{
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            margin-bottom: 10px;
+        }
+        /* Стилі карток творів та письменників*/
+        .work-card { /* загальне створення картки */
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 10px;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        /*.work-card:hover {
+            transform: scale(1.01);
+        }*/
+
+        .work-image { /* фото твору в картках */
+            width: 120px;
+            height: 160px;
+            object-fit: cover; /* Зберігає пропорції зображення */
+            border-radius: 10px;
+            flex-shrink: 0; /* Не дозволяє зображенню зменшуватися */
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .work-content { /* штука для створення тексту в картках із творами */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            color: bisque;
+        }
+
+        .work-content h2 { /* заголовок картки */
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .work-title { /* назва твору */
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+
+        .work-text { /* штука для створення карток */
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #ddd;
+        }
+
+        .button-container { /*для кнопок внизу картки */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .tvori-button {
+            border: 2px dashed wheat;
+        }
+
+    </style>
+</head>
+<body>
+    `<header class = "header">
+        <h1> Читати "Думи мої, думи мої..." </h1>
+    </header>`
+    <div>
+        <div class="menu">
+            <a href="../tvori.html" class="menu-button tvori-button" style="text-align:center; text-decoration:none;">Твори</a>
+            <a href="../pismenniki.html" class="menu-button" style="text-align:center; text-decoration:none;">Письменники</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="work-card">
+            <img src="../photo_tvoriv/dumi_moi.jpg" alt="Фото твору або автора" class="work-image">
+            <div class="work-content">
+                <h2 class="work-title">Короткий паспорт твору</h2>
+                <p class="work-text"><span style = "color: white;">Автор:</span> Тарас Григорович Шевченко</p>
+                <p class="work-text"><span style = "color: white;">Жанр:</span> Громадянська лірика</p>
+                <p class="work-text"><span style = "color: white;">Рік написання:</span> 1839</p>
+                <div class = "button-container">
+                    <a href="analiz_dumi_moi.html" class="menu-button" style="text-align:center; text-decoration:none;">Повний аналіз</a>
+                    <a href="../pissmenniki/t_shevchenko.html" class="menu-button" style="text-align:center; text-decoration:none;">Автор</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <div class="work-content">
+                <h2 class="work-title">Текст твору</h2>
+                <p class="work-text" style = "text-align: center;">Думи мої, думи мої,<br />
+Лихо мені з вами!<br />
+Нащо стали на папері<br />
+Сумними рядами?..<br />
+Чом вас вітер не розвіяв<br />
+В степу, як пилину?<br />
+Чом вас лихо не приспало,<br />
+Як свою дитину?..<br />
+<br />
+Бо вас лихо на світ на сміх породило,<br />
+Поливали сльози... чом не затопили,<br />
+Не винесли в море, не розмили в полі?.<br />
+Не питали б люде, що в мене болить,<br />
+Не питали б, за що проклинаю долю,<br />
+Чого нуджу світом? "Нічого робить", —<br />
+Не сказали б на сміх...<br />
+<br />
+Квіти мої, діти!<br />
+Нащо ж вас кохав я, нащо доглядав?<br />
+Чи заплаче серце одно на всім світі,<br />
+Як я з вами плакав?.. Може, і вгадав...<br />
+Може, найдеться дівоче<br />
+Серце, карі очі,<br />
+Що заплачуть на сі думи, —<br />
+Я більше не хочу.<br />
+Одну сльозу з очей карих —<br />
+І пан над панами!<br />
+Думи мої, думи мої,<br />
+Лихо мені з вами!<br />
+<br />
+За карії оченята,<br />
+За чорнії брови<br />
+Серце рвалося, сміялось,<br />
+Виливало мову,<br />
+Виливало, як уміло,<br />
+За темнії ночі,<br />
+За вишневий сад зелений,<br />
+За ласки дівочі...<br />
+За степи та за могили,<br />
+Що на Україні,<br />
+Серце мліло, не хотіло<br />
+Співать на чужині...<br />
+Не хотілось в снігу, в лісі,<br />
+Козацьку громаду<br />
+З булавами, з бунчугами<br />
+Збирать на пораду.<br />
+Нехай душі козацькії<br />
+В Украйні витають —<br />
+Там широко, там весело<br />
+Од краю до краю...<br />
+Як та воля, що минулась,<br />
+Дніпр широкий — море,<br />
+Степ і степ, ревуть пороги,<br />
+І могили — гори,-<br />
+Там родилась, гарцювала<br />
+Козацькая воля;<br />
+Там шляхтою, татарами<br />
+Засівала поле,<br />
+Засівала трупом поле,<br />
+Поки не остило...<br />
+Лягла спочить... А тим часом<br />
+Виросла могила,<br />
+А над нею орел чорний<br />
+Сторожем літає,<br />
+І про неї добрим людям<br />
+Кобзарі співають,<br />
+Все співають, як діялось,<br />
+Сліпі небораки, —<br />
+Бо дотепні... А я... а я<br />
+Тілько вмію плакать,<br />
+Тілько сльози за Украйну...<br />
+А слова — немає...<br />
+А за лихо... Та цур йому!<br />
+Хто його не знає!<br />
+А надто той, що дивиться<br />
+На людей душою, —<br />
+Пекло йому на сім світі,<br />
+А на тім...<br />
+Журбою<br />
+Не накличу собі долі,<br />
+Коли так не маю.<br />
+Нехай злидні живуть три дні<br />
+Я їх заховаю,<br />
+Заховаю змію люту<br />
+Коло свого серця,<br />
+Щоб вороги не бачили,<br />
+Як лихо сміється...<br />
+Нехай думка, як той ворон,<br />
+Літає та кряче,<br />
+А серденько соловейком<br />
+Щебече та плаче<br />
+Нишком — люди не побачать,<br />
+То й не засміються...<br />
+Не втирайте ж мої сльози,<br />
+Нехай собі ллються,<br />
+Чуже поле поливають<br />
+Щодня і щоночі,<br />
+Поки, поки... не засиплють<br />
+Чужим піском очі...<br />
+Отаке-то... А що робить?<br />
+Журба не поможе.<br />
+Хто ж сироті завидує —<br />
+Карай того, боже!<br />
+<br />
+Думи мої, думи мої,<br />
+Квіти мої, діти!<br />
+Виростав вас, доглядав вас,-<br />
+Де ж мені вас діти?<br />
+В Україну ідіть, діти!<br />
+В нашу Україну,<br />
+Попідтинню, сиротами,<br />
+<br />
+А я — тут загину.<br />
+Там найдете щире серце<br />
+І слово ласкаве,<br />
+Там найдете щиру правду,<br />
+А ще, може, й славу...<br />
+<br />
+Привітай же, моя ненько,<br />
+Моя Україно,<br />
+Моїх діток нерозумних,<br />
+Як свою дитину.<br />
+<br />
+(1839, С.-Петербург)
+</p>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>
